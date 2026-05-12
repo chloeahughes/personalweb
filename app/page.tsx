@@ -56,29 +56,7 @@ export default function Home() {
 
                 <p>Stanford Social Network - Social networking tool for Stanford seniors.</p>
 
-                <p>
-                  <a
-                    href="https://www.abodexos.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
-                    style={{ color: "#2F195F" }}
-                  >
-                    Abodex
-                  </a>
-                </p>
 
-                <p className="font-bold">
-                  <a
-                    href="https://www.abodexos.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
-                    style={{ color: "#2F195F" }}
-                  >
-                    Now, I'm building Abodex, a frictionless deal management platform to streamline CRE transactions.
-                  </a>
-                </p>
               </div>
             </div>
           </div>
