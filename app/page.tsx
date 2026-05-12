@@ -128,6 +128,41 @@ export default function Home() {
                 </Card>
               </a>
 
+              <a
+                href="https://eastbayexpress.com/all-people-powered-stages-the-future/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="border-border bg-card hover:shadow-lg transition-shadow h-full">
+                  <CardContent className="p-8">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
+                          EBX
+                        </h3>
+                        <span className="text-sm" style={{ color: "#2F195F" }}>
+                          Apr. 2026
+                        </span>
+                      </div>
+                      <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
+                        &apos;All People Powered&apos; stages the future
+                      </h4>
+                      <p className="text-sm" style={{ color: "#2F195F" }}>
+                        Winner of Co-Founder Musical Pitch Competition
+                      </p>
+                      <span
+                        className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
+                        style={{ color: "#2F195F" }}
+                      >
+                        Read Article
+                        <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+
               <Card className="border-border bg-card hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="space-y-4">
