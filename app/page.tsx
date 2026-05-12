@@ -102,9 +102,14 @@ export default function Home() {
                 <Card className="border-border bg-card hover:shadow-lg transition-shadow h-full">
                   <CardContent className="p-8">
                     <div className="space-y-4">
-                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
-                        OpenAI
-                      </h3>
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
+                          OpenAI
+                        </h3>
+                        <span className="text-sm" style={{ color: "#2F195F" }}>
+                          May 2026
+                        </span>
+                      </div>
                       <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
                         Introducing ChatGPT Futures: Class of 2026
                       </h4>
