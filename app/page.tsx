@@ -56,19 +56,6 @@ export default function Home() {
 
                 <p>
                   <a
-                    href="https://findmescholarships.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
-                    style={{ color: "#2F195F" }}
-                  >
-                    Finnie AI
-                  </a>{" "}
-                  - Scholarship-matching tool with 5,000 student users, 4,500 Common App uploads, and 30,000 scholarships matched.
-                </p>
-
-                <p>
-                  <a
                     href="https://cardinnect.com/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -78,6 +65,19 @@ export default function Home() {
                     Cardinnect
                   </a>{" "}
                   - Social networking tool for Stanford seniors.
+                </p>
+
+                <p>
+                  <a
+                    href="https://findmescholarships.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
+                    style={{ color: "#2F195F" }}
+                  >
+                    Finnie AI
+                  </a>{" "}
+                  - Scholarship-matching tool with 5,000 student users, 4,500 Common App uploads, and 30,000 scholarships matched.
                 </p>
 
 
