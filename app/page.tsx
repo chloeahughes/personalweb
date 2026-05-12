@@ -93,6 +93,36 @@ export default function Home() {
               Press
             </h2>
             <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
+              <a
+                href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="border-border bg-card hover:shadow-lg transition-shadow h-full">
+                  <CardContent className="p-8">
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
+                        OpenAI
+                      </h3>
+                      <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
+                        Introducing ChatGPT Futures: Class of 2026
+                      </h4>
+                      <p className="text-sm" style={{ color: "#2F195F" }}>
+                        Recipient of ChatGPT Futures
+                      </p>
+                      <span
+                        className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
+                        style={{ color: "#2F195F" }}
+                      >
+                        Read Article
+                        <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+
               <Card className="border-border bg-card hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="space-y-4">
