@@ -56,27 +56,16 @@ export default function Home() {
 
                 <p>Stanford Social Network - Social networking tool for Stanford seniors.</p>
 
-                <p>
-                  <a
-                    href="https://www.abodexos.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
-                    style={{ color: "#2F195F" }}
-                  >
-                    Abodex
-                  </a>
-                </p>
-
                 <p className="font-bold">
                   <a
-                    href="https://www.abodexos.com/"
+                    href="https://findmescholarships.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
                     style={{ color: "#2F195F" }}
                   >
-                    Now, I'm building Abodex, a frictionless deal management platform to streamline CRE transactions.
+                    Finnie AI Scholarship-matching tool with 5,000 student users, 4,500 Common App uploads, and
+                    30,000 scholarships matched
                   </a>
                 </p>
               </div>
@@ -141,6 +130,34 @@ export default function Home() {
                     </p>
                     <a
                       href="https://www.usatoday.com/story/money/2025/08/20/silicon-valley-tech-women-hacker-houses/85521246007/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
+                      style={{ color: "#2F195F" }}
+                    >
+                      Read Article
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
+                <CardContent className="p-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
+                        EBX
+                      </h3>
+                    </div>
+                    <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
+                      &apos;All People Powered&apos; stages the future
+                    </h4>
+                    <p className="text-sm" style={{ color: "#2F195F" }}>
+                      Winner of Co-Founder Musical Pitch Competition
+                    </p>
+                    <a
+                      href="https://eastbayexpress.com/all-people-powered-stages-the-future/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
