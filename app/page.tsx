@@ -54,7 +54,18 @@ export default function Home() {
 
                 <p>Energy Equity Mapping - Energy equity map for a local environmental nonprofit.</p>
 
-                <p>Stanford Social Network - Social networking tool for Stanford seniors.</p>
+                <p>
+                  <a
+                    href="https://cardinnect.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
+                    style={{ color: "#2F195F" }}
+                  >
+                    Cardinnect
+                  </a>{" "}
+                  - Social networking tool for Stanford seniors.
+                </p>
 
 
               </div>
