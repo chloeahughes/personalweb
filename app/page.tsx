@@ -1,5 +1,6 @@
 import { ArrowRight, Linkedin, Mail } from "lucide-react"
 import { PhotoCarousel } from "../components/photo-carousel"
+import { PlusBackground } from "../components/plus-background"
 import styles from "./page.module.css"
 
 const press = [
@@ -46,6 +47,7 @@ const press = [
 export default function Home() {
   return (
     <div className={styles.site}>
+      <PlusBackground />
       <a className={styles.skipLink} href="#about">Skip to content</a>
       <header className={styles.header}>
         <a className={styles.wordmark} href="#about">Chloe Akiko Hughes</a>
