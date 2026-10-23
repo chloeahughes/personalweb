@@ -1,0 +1,19 @@
+.carousel { width: 100%; }
+.viewport { overflow: hidden; border-radius: 15px; }
+.viewport:focus-visible { outline: 3px solid #8468bc; outline-offset: 6px; }
+.track { display: flex; touch-action: pan-y pinch-zoom; margin-left: -18px; }
+.slide { flex: 0 0 auto; min-width: 0; padding-left: 18px; }
+.photo { display: block; height: clamp(300px, 32vw, 400px); width: auto; max-width: 78vw; object-fit: contain; background: #f4f2f7; border-radius: 14px; user-select: none; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 19px; margin-top: 18px; }
+.controls button { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #dcd7e5; border-radius: 50%; background: white; color: inherit; cursor: pointer; }
+.controls button:hover { background: #f5f1fa; }
+.controls button:disabled { opacity: .35; cursor: default; }
+.counter { min-width: 54px; margin: 0; text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; color: #73657f; }
+.divider { padding: 0 9px; color: #b6aabd; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 600px) {
+  .track { margin-left: -12px; }
+  .slide { padding-left: 12px; }
+  .photo { height: 310px; max-width: 82vw; }
+  .controls { margin-top: 16px; }
+}
