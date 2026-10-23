@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0); /* white */
-  --foreground: oklch(0.3 0.15 270); /* indigo purple for text */
+  --background: #fffdf7;
+  --foreground: #493425;
   --card: oklch(0.98 0.02 270); /* ghost white with purple tint */
   --card-foreground: oklch(0.3 0.15 270);
   --popover: oklch(1 0 0);
