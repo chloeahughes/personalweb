@@ -1,240 +1,114 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Linkedin, ArrowRight } from "lucide-react"
+import { ArrowRight, Linkedin, Mail } from "lucide-react"
+import { PhotoCarousel } from "../components/photo-carousel"
+import styles from "./page.module.css"
+
+const press = [
+  {
+    company: "OpenAI",
+    title: "Codex Originals",
+    description: "Partnered with OpenAI to promote Finnie AI",
+    url: "https://openai.com/codex-originals/",
+  },
+  {
+    company: "OpenAI",
+    date: "May 2026",
+    dateTime: "2026-05",
+    title: "Introducing ChatGPT Futures: Class of 2026",
+    description: "Recipient of ChatGPT Futures",
+    url: "https://openai.com/index/introducing-chatgpt-futures-class-of-2026/",
+  },
+  {
+    company: "EBX",
+    date: "Apr. 2026",
+    dateTime: "2026-04",
+    title: "'All People Powered' stages the future",
+    description: "Winner of Co-Founder Musical Pitch Competition",
+    url: "https://eastbayexpress.com/all-people-powered-stages-the-future/",
+  },
+  {
+    company: "The New York Times",
+    date: "Aug. 2025",
+    dateTime: "2025-08",
+    title: "8 Women, 4 Bedrooms and 1 Cause: Breaking A.I.'s Glass Ceiling",
+    description: "Featured on the cover of the Technology section.",
+    url: "https://www.nytimes.com/2025/08/23/business/ai-female-hackers-foundher-house.html",
+  },
+  {
+    company: "USA Today",
+    date: "Aug. 2025",
+    dateTime: "2025-08",
+    title: "Their rent is VC-backed and they're blasting Taylor Swift: Inside this all-female hacker house",
+    description: "Featured on the cover.",
+    url: "https://www.usatoday.com/story/money/2025/08/20/silicon-valley-tech-women-hacker-houses/85521246007/",
+  },
+]
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background font-sans flex">
-      <nav className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
-        <div className="flex flex-col gap-4 p-4">
-          <a href="#about" className="text-[#2F195F] hover:text-[#2F195F]/80 transition-colors font-medium">
-            About
-          </a>
-          <a href="#press" className="text-[#2F195F] hover:text-[#2F195F]/80 transition-colors font-medium">
-            Press
-          </a>
-          <a href="#contact" className="text-[#2F195F] hover:text-[#2F195F]/80 transition-colors font-medium">
-            Contact
-          </a>
-        </div>
-      </nav>
-
-      <div className="flex-1 mr-20">
-        {/* Hero Section */}
-        <section id="about" className="py-20 px-6">
-          <div className="max-w-6xl">
-            <div className="space-y-8">
-              <div className="flex items-center justify-between gap-12 mb-12">
-                <h1 className="text-[144px] font-normal leading-none" style={{ color: "#2F195F" }}>
-                  Chloe Akiko Hughes
-                </h1>
-                <div className="relative flex-shrink-0">
-                  <div className="w-72 h-72 rounded-full bg-[#2F195F] p-2">
-                    <div className="w-full h-full rounded-full bg-white p-2">
-                      <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/headshot-JERM8WuYGQhUkZHzvL50n4kXxJdOZd.png"
-                        alt="Chloe Akiko Hughes"
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+    <div className={styles.site}>
+      <a className={styles.skipLink} href="#about">Skip to content</a>
+      <header className={styles.header}>
+        <a className={styles.wordmark} href="#about">Chloe Akiko Hughes</a>
+        <nav className={styles.navigation} aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#press">Press</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <section id="about" className={styles.hero} aria-labelledby="name">
+          <PhotoCarousel />
+          <div className={styles.hashtags} aria-label="Hashtags">
+            <span>#OpenAIPartner</span>
+            <span>#SanFrancisco</span>
+            <span>#YOLO</span>
+          </div>
+          <h1 id="name" className={styles.name}>Chloe Akiko Hughes</h1>
+          <p className={styles.story}>
+            Rural Ohio → Stanford University Data Science → building AI solutions to make slow-moving industries fast
+          </p>
+          <ul className={styles.achievements}>
+            <li><strong>Pollution tracking</strong> - grew organization to 100+ members, partnered with Fortune 500 companies and international nonprofits</li>
+            <li><strong>Energy Mapping</strong> - built interactive energy map for nonprofit used by 17,000+ people</li>
+            <li>
+              <a href="https://findmescholarships.com/" target="_blank" rel="noopener noreferrer"><strong>Finnie AI</strong></a>
+              {" - experience-based campaigns via scholarship platform of 15,000+ users"}
+            </li>
+          </ul>
+        </section>
+        <section id="press" className={styles.press} aria-labelledby="press-title">
+          <div className={styles.sectionInner}>
+            <h2 id="press-title" className={styles.sectionTitle}>Press</h2>
+            <div className={styles.pressGrid}>
+              {press.map((article) => (
+                <article className={styles.pressCard} key={article.url}>
+                  <div className={styles.publisher}>
+                    <h3>{article.company}</h3>
+                    {article.date && <time dateTime={article.dateTime}>{article.date}</time>}
                   </div>
-                </div>
-              </div>
-
-              <div className="space-y-6 text-xl leading-relaxed" style={{ color: "#2F195F" }}>
-                <p>I grew up in a small town in Ohio.</p>
-
-                <p>I now study Data Science at Stanford University.</p>
-
-                <p>I build data solutions to make slow moving industries fast:</p>
-
-                <p>
-                  Environmental Impact Tracking - Environmental organization focused on creating and tracking pollution
-                  impact through cleanups, recycling, etc.
-                </p>
-
-                <p>Energy Equity Mapping - Energy equity map for a local environmental nonprofit.</p>
-
-                <p>Stanford Social Network - Social networking tool for Stanford seniors.</p>
-
-                <p className="font-bold">
-                  <a
-                    href="https://findmescholarships.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
-                    style={{ color: "#2F195F" }}
-                  >
-                    Finnie AI Scholarship-matching tool with 5,000 student users, 4,500 Common App uploads, and
-                    30,000 scholarships matched
+                  <h4>{article.title}</h4>
+                  <p>{article.description}</p>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${article.title} on ${article.company}`}>
+                    Read Article <ArrowRight size={16} aria-hidden="true" />
                   </a>
-                </p>
-              </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
-
-        {/* Press Section */}
-        <section id="press" className="py-16 px-6 bg-muted/30">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: "#2F195F" }}>
-              Press
-            </h2>
-            <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
-              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
-                        The New York Times
-                      </h3>
-                      <span className="text-sm" style={{ color: "#2F195F" }}>
-                        Aug. 2025
-                      </span>
-                    </div>
-                    <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
-                      8 Women, 4 Bedrooms and 1 Cause: Breaking A.I.'s Glass Ceiling
-                    </h4>
-                    <p className="text-sm" style={{ color: "#2F195F" }}>
-                      Featured on the cover of the Technology section.
-                    </p>
-                    <a
-                      href="https://www.nytimes.com/2025/08/23/business/ai-female-hackers-foundher-house.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
-                      style={{ color: "#2F195F" }}
-                    >
-                      Read Article
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
-                        USA Today
-                      </h3>
-                      <span className="text-sm" style={{ color: "#2F195F" }}>
-                        Aug. 2025
-                      </span>
-                    </div>
-                    <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
-                      Their rent is VC-backed and they're blasting Taylor Swift: Inside this all-female hacker house
-                    </h4>
-                    <p className="text-sm" style={{ color: "#2F195F" }}>
-                      Featured on the cover.
-                    </p>
-                    <a
-                      href="https://www.usatoday.com/story/money/2025/08/20/silicon-valley-tech-women-hacker-houses/85521246007/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
-                      style={{ color: "#2F195F" }}
-                    >
-                      Read Article
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <h3 className="text-2xl font-bold" style={{ color: "#2F195F" }}>
-                        EBX
-                      </h3>
-                    </div>
-                    <h4 className="text-lg font-semibold" style={{ color: "#2F195F" }}>
-                      &apos;All People Powered&apos; stages the future
-                    </h4>
-                    <p className="text-sm" style={{ color: "#2F195F" }}>
-                      Winner of Co-Founder Musical Pitch Competition
-                    </p>
-                    <a
-                      href="https://eastbayexpress.com/all-people-powered-stages-the-future/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
-                      style={{ color: "#2F195F" }}
-                    >
-                      Read Article
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        <section id="contact" className={styles.contact} aria-labelledby="contact-title">
+          <h2 id="contact-title" className={styles.sectionTitle}>Contact</h2>
+          <div className={styles.contactLinks}>
+            <a href="https://www.linkedin.com/in/chloeahughes/" target="_blank" rel="noopener noreferrer">
+              <Linkedin size={21} aria-hidden="true" /> LinkedIn <ArrowRight size={16} aria-hidden="true" />
+            </a>
+            <a href="mailto:cahughes@stanford.edu">
+              <Mail size={21} aria-hidden="true" /> Email <ArrowRight size={16} aria-hidden="true" />
+            </a>
           </div>
         </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-16 px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: "#2F195F" }}>
-              Contact
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
-              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center justify-center gap-3">
-                    <div className="flex items-center gap-3">
-                      <Linkedin className="h-6 w-6" style={{ color: "#2F195F" }} />
-                      <span className="font-medium" style={{ color: "#2F195F" }}>
-                        LinkedIn
-                      </span>
-                    </div>
-                    <a
-                      href="https://www.linkedin.com/in/chloeahughes/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
-                      style={{ color: "#2F195F" }}
-                    >
-                      Connect with me
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-border bg-card hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center justify-center gap-3">
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-6 w-6" style={{ color: "#2F195F" }} />
-                      <span className="font-medium" style={{ color: "#2F195F" }}>
-                        Email
-                      </span>
-                    </div>
-                    <a
-                      href="mailto:cahughes@stanford.edu"
-                      className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
-                      style={{ color: "#2F195F" }}
-                    >
-                      Chat with me
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="py-8 px-6 border-t border-border bg-card/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm" style={{ color: "#2F195F" }}>
-              © 2025 Chloe Hughes.
-            </p>
-          </div>
-        </footer>
-      </div>
+      </main>
+      <footer className={styles.footer}>© {new Date().getFullYear()} Chloe Akiko Hughes.</footer>
     </div>
   )
 }
