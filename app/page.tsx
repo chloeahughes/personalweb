@@ -60,23 +60,25 @@ export default function Home() {
       <main>
         <section id="about" className={styles.hero} aria-labelledby="name">
           <PhotoCarousel />
-          <div className={styles.hashtags} aria-label="Hashtags">
-            <span>#OpenAIPartner</span>
-            <span>#SanFrancisco</span>
-            <span>#YOLO</span>
+          <div className={styles.heroCopy}>
+            <div className={styles.hashtags} aria-label="Hashtags">
+              <span>#OpenAIPartner</span>
+              <span>#SanFrancisco</span>
+              <span>#YOLO</span>
+            </div>
+            <h1 id="name" className={styles.name}>Chloe Akiko Hughes</h1>
+            <p className={styles.story}>
+              Rural Ohio → Stanford University Data Science → building AI solutions to make slow-moving industries fast
+            </p>
+            <ul className={styles.achievements}>
+              <li><strong>Pollution tracking</strong> - grew organization to 100+ members, partnered with Fortune 500 companies and international nonprofits</li>
+              <li><strong>Energy Mapping</strong> - built interactive energy map for nonprofit used by 17,000+ people</li>
+              <li>
+                <a href="https://findmescholarships.com/" target="_blank" rel="noopener noreferrer"><strong>Finnie AI</strong></a>
+                {" - experience-based campaigns via scholarship platform of 15,000+ users"}
+              </li>
+            </ul>
           </div>
-          <h1 id="name" className={styles.name}>Chloe Akiko Hughes</h1>
-          <p className={styles.story}>
-            Rural Ohio → Stanford University Data Science → building AI solutions to make slow-moving industries fast
-          </p>
-          <ul className={styles.achievements}>
-            <li><strong>Pollution tracking</strong> - grew organization to 100+ members, partnered with Fortune 500 companies and international nonprofits</li>
-            <li><strong>Energy Mapping</strong> - built interactive energy map for nonprofit used by 17,000+ people</li>
-            <li>
-              <a href="https://findmescholarships.com/" target="_blank" rel="noopener noreferrer"><strong>Finnie AI</strong></a>
-              {" - experience-based campaigns via scholarship platform of 15,000+ users"}
-            </li>
-          </ul>
         </section>
         <section id="press" className={styles.press} aria-labelledby="press-title">
           <div className={styles.sectionInner}>

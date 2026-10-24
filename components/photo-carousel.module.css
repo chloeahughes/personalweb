@@ -1,6 +1,6 @@
 .carousel { position: relative; width: 100%; }
-.viewport { overflow: hidden; border-radius: 15px; }
-.viewport:focus-visible { outline: 3px solid #a67a24; outline-offset: 6px; }
+.viewport { overflow: hidden; }
+.viewport:focus-visible { outline: 3px solid #a67a24; outline-offset: -3px; }
 .track { display: flex; touch-action: pan-y pinch-zoom; margin-left: -18px; }
 .slide { flex: 0 0 auto; min-width: 0; padding-left: 18px; }
 .photo { display: block; height: clamp(300px, 32vw, 400px); width: auto; max-width: 78vw; object-fit: cover; background: #f5f0e3; border-radius: 14px; user-select: none; }
