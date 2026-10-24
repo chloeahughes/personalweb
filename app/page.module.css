@@ -23,7 +23,7 @@
 .hero { padding: 12px 0 76px; scroll-margin-top: 24px; }
 .heroCopy { max-width: 1184px; margin: auto; padding: 0 32px; }
 .hashtags { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; margin: 23px 0 16px; color: var(--site-muted); font-size: 13px; }
-.name { margin: 0; text-align: center; font-weight: 400; font-size: clamp(36px, 5.5vw, 70px); letter-spacing: -.045em; line-height: 1.15; }
+.name { margin: 0; text-align: center; font-weight: 700; font-size: clamp(36px, 5.5vw, 70px); letter-spacing: -.045em; line-height: 1.15; }
 .story { max-width: 770px; margin: 25px auto 0; color: #614c39; text-align: center; font-size: clamp(16px, 1.65vw, 19px); line-height: 1.8; text-wrap: pretty; }
 .achievements { max-width: 800px; margin: 35px auto 0; padding-left: 23px; list-style: disc; display: grid; gap: 18px; font-size: 17px; }
 .achievements li { padding-left: 6px; }
